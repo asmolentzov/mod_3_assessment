@@ -7,8 +7,7 @@ describe NrelService do
     service = NrelService.new(zip, radius)
     stations = service.get_stations
     
-    expect(stations[:total_results]).to eq(3)
-    expect(stations[:fuel_stations].count).to eq(3)
-    expect(stations[:fuel_stations].count).to eq(3)
+    expect(stations[:total_results]).to eq(103)
+    expect(stations[:fuel_stations].count).to eq(20)
   end
 end

@@ -6,7 +6,7 @@ class NrelService
   end
   
   def get_stations
-    get_results("api/alt-fuel-stations/v1.json?fuel_type=ELEC,LPG&zip=#{@zip}&radius=#{@radius}")
+    get_results("api/alt-fuel-stations/v1/nearest.json?fuel_type=ELEC,LPG&location=#{@zip}&radius=#{@radius}")
   end
   
   def get_results(url)
