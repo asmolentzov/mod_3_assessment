@@ -1,12 +1,7 @@
 class NrelService
-  
-  def initialize(zip, radius)
-    @zip = zip
-    @radius = radius
-  end
-  
-  def get_stations
-    get_results("api/alt-fuel-stations/v1/nearest.json?fuel_type=ELEC,LPG&location=#{@zip}&radius=#{@radius}")
+
+  def get_stations(zip, radius)
+    get_results("api/alt-fuel-stations/v1/nearest.json?fuel_type=ELEC,LPG&location=#{zip}&radius=#{radius}")
   end
   
   def get_results(url)

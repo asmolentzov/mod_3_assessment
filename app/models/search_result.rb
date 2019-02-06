@@ -6,7 +6,8 @@ class SearchResult
   end
   
   def closest_stations(quantity)
-    raw_stations = NrelService.new(@zip, @radius).get_stations[:fuel_stations]
+    service = NrelService.new
+    raw_stations = service.get_stations(@zip, @radius)[:fuel_stations]
     stations = raw_stations.map do |raw_station|
       Station.new(raw_station)
     end
