@@ -23,4 +23,14 @@ describe Station do
     expect(station.distance).to eq(2)
     expect(station.access_times).to eq('MO: 12:00am-12:00am; TU: 12:00am-12:00am; WE: 12:00am-12:00am; TH: 12:00am-12:00am; FR: 12:00am-12:00am; SA: 12:00am-12:00am; SU: 12:00am-12:00am')
   end
+  it 'can sort stations by distance' do
+    station_1 = Station.new(distance: 3)
+    station_2 = Station.new(distance: 0.5)
+    station_3 = Station.new(distance: 2)
+    station_4 = Station.new(distance: 1)
+    
+    stations = [station_1, station_2, station_3, station_4]
+    sorted_stations = [station_2, station_4, station_3]
+    expect(Station.sorted_stations(stations, 3)).to eq(sorted_stations)
+  end
 end

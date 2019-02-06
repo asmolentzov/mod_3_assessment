@@ -1,6 +1,6 @@
 <h1>Stations</h1>
 <ul>
-  <% @search_result.stations(10).each do |station| %>
+  <% @search_result.closest_stations(10).each do |station| %>
     <li class="station"><ul>
       <li>Name: <%= station.name %></li>
       <li>Address: <%= station.address %></li>
