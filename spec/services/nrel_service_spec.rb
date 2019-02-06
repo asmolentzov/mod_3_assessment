@@ -2,7 +2,9 @@ require 'rails_helper'
 
 describe NrelService do
   it 'can get stations' do
-    service = NrelService.new
+    zip = 80203
+    radius = 6
+    service = NrelService.new(zip, radius)
     stations = service.get_stations
     
     expect(stations[:total_results]).to eq(3)
