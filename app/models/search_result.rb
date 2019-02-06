@@ -1,5 +1,4 @@
 class SearchResult
-  
   def initialize(zip)
     @zip = zip
     @radius = 6
@@ -11,6 +10,6 @@ class SearchResult
     stations = raw_stations.map do |raw_station|
       Station.new(raw_station)
     end
-    Station.sort_by_distance(stations, quantity)
+    Station.sort_by_distance(stations)[0...quantity]
   end
 end

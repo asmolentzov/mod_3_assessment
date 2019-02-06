@@ -30,7 +30,7 @@ describe Station do
     station_4 = Station.new(distance: 1)
     
     stations = [station_1, station_2, station_3, station_4]
-    sorted_stations = [station_2, station_4, station_3]
-    expect(Station.sort_by_distance(stations, 3)).to eq(sorted_stations)
+    sorted_stations = [station_2, station_4, station_3, station_1]
+    expect(Station.sort_by_distance(stations)).to eq(sorted_stations)
   end
 end

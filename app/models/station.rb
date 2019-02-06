@@ -13,10 +13,9 @@ class Station
     @access_times = attributes[:access_days_time]
   end
   
-  def self.sort_by_distance(stations, quantity)
-    sorted_stations = stations.sort_by do |station|
+  def self.sort_by_distance(stations)
+    stations.sort_by do |station|
       station.distance
     end
-    sorted_stations[0...quantity]
   end
 end
