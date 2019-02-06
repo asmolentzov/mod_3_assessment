@@ -9,11 +9,11 @@ describe Station do
   end
   it 'has attributes' do
     attributes = {
-      name: 'Station 1',
-      address: '1700 Sherman Street',
-      fuel_types: 'ELEC',
+      station_name: 'Station 1',
+      street_address: '1700 Sherman Street',
+      fuel_type_code: 'ELEC',
       distance: 2,
-      access_times: 'MO: 12:00am-12:00am; TU: 12:00am-12:00am; WE: 12:00am-12:00am; TH: 12:00am-12:00am; FR: 12:00am-12:00am; SA: 12:00am-12:00am; SU: 12:00am-12:00am'
+      access_days_time: 'MO: 12:00am-12:00am; TU: 12:00am-12:00am; WE: 12:00am-12:00am; TH: 12:00am-12:00am; FR: 12:00am-12:00am; SA: 12:00am-12:00am; SU: 12:00am-12:00am'
     }
     station = Station.new(attributes)
     
